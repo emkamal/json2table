@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   selector = document.getElementById("selector");
   selector.onchange = function(e){
     fillTable("table", data[selector.options[selector.selectedIndex].value]);
+    new Tablesort(document.getElementById("table"));
   }
 
   new Tablesort(document.getElementById("table"));
@@ -30,7 +31,10 @@ function fillTable(tableId, inputData){
       for (var k in inputData[key]) {
         if(cols.indexOf(k) == -1){
           cols.push(k);
-          headings += `<th>${k}</th>`;
+          var sortmethod = "";
+          if(k == "price"){ sortmethod = " data-sort-method='number'"; }
+          else if(k.indexOf("date") >= 0){ sortmethod = " data-sort-method='date'"; }
+          headings += `<th ${sortmethod}>${k}</th>`;
         }
       }
     }
