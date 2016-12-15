@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   selector.onchange = function(e){
     fillTable("table", data[selector.options[selector.selectedIndex].value]);
   }
+
+  new Tablesort(document.getElementById("table"));
 });
 
 /**
@@ -52,6 +54,6 @@ function fillTable(tableId, inputData){
     rows += "</tr>";
   }
 
-  tableHeading = `<tr>${headings}</tr>`;
+  tableHeading = `<tr class='no-sort'>${headings}</tr>`;
   table.innerHTML = tableHeading + rows;
 }

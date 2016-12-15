@@ -4,20 +4,16 @@
    <head>
       <meta charset="utf-8">
       <title>CeleraOne Application-Task</title>
+      <script src="sorts/tablesort.number.js"></script>
+      <script src="sorts/tablesort.date.js"></script>
+      <script src="tablesort.js"></script>
       <script src="solution.js"></script>
-      <style type="text/css">
-         table {
-         width: 640px;
-         border-collapse: collapse;
-         border-spacing: 0;
-         }
-         td, th { border: 1px solid #CCC; }
-      </style>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
    </head>
    <body>
-      <div id="test"></div>
+      <div class="container">
       <h4>Table <select id="selector"><option value="0" selected>Load data 1</option><option value="1">Load data 2</option></select></h4>
-      <table id="table"></table>
+      <table id="table" class="table"></table>
       <hr>
       <h3>CeleraOne Application-Task for JavaScript developers (version 0.3)</h3>
       <p>The porpose of this task is to generate a table from data.
@@ -253,5 +249,6 @@
       <p>
          You can style the table if you wish to do so. but the task will be judged only on the quality of your JavaScript code.
       </p>
+      </div>
    </body>
 </html>
