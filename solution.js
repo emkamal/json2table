@@ -59,5 +59,5 @@ function fillTable(tableId, inputData){
   }
 
   tableHeading = `<tr class='no-sort'>${headings}</tr>`;
-  table.innerHTML = tableHeading + rows;
+  table.innerHTML = tableHeading + rows; // fill the table
 }
